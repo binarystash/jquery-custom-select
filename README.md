@@ -4,6 +4,10 @@
 
 Custom Select is a jQuery plugin for customizing the appearance of select elements.
 
+#Demo
+
+Play with a (fiddle)[http://jsfiddle.net/binarystash/4Nuce/].
+
 ## Getting Started
 
 Download the [production version][min] or the [development version][max].
