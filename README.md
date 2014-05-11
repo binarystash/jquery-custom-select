@@ -40,6 +40,9 @@ In your webpage:
 
 3. You can customize the appearance by editing custom-select.css.
 
+##Compatibility
+Tested on IE8; latest versions of Firefox and Chrome
+
 ## Support
 Report bugs at https://github.com/binarystash/custom-select/issues.
 
