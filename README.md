@@ -8,14 +8,14 @@ Custom Select is a jQuery plugin for customizing the appearance of select elemen
 
 Play with a [fiddle](http://jsfiddle.net/binarystash/4Nuce/).
 
-## Getting Started
+## Installation
 
 Download the [production version][min] or the [development version][max].
 
 [min]: https://raw.github.com/binarystash/jquery-custom-select/master/dist/jquery.custom-select.min.js
 [max]: https://raw.github.com/binarystash/jquery-custom-select/master/dist/jquery.custom-select.js
 
-## Installation
+In your webpage:
 
 ```html
 	<script src="jquery.js"></script>
@@ -35,9 +35,7 @@ Download the [production version][min] or the [development version][max].
 2. Call the plugin.
 
 	```javascript
-	jQuery(function($) {
-	  $('select').customSelect();
-	});
+	jQuery('select').customSelect();
 	```
 
 3. You can customize the appearance by editing custom-select.css.
