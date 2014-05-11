@@ -1,6 +1,6 @@
-# A plugin for customizing the appearance of select elements
+# jQuery Custom Select
 
-Cusotm Select is a jQuery plugin for customizing the appearance of select elements
+Custom Select is a jQuery plugin for customizing the appearance of select elements
 
 ## Getting Started
 
