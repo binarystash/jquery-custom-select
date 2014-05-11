@@ -1,0 +1,48 @@
+.custom-select {
+	height:34px;
+	width:100%;
+	max-width:354px;
+	opacity:0;
+	margin-bottom:-34px;
+	border:0;
+	position:relative;
+	z-index:2;
+	display:block;
+	filter:alpha(opacity=0);
+}
+
+.custom-select-display {
+	width:100%;
+	height:20px;
+	max-width:340px;
+	padding:5px;
+	background:#fff;
+	position:relative;
+	z-index:1;
+	border:2px solid gray;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border-radius:6px;
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) inset;
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) inset;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+.custom-select-display.focused {
+	border-color:#e7a61a;
+}
+
+.custom-select-display-value {
+	width:320px;
+	float:left;
+}
+
+.custom-select-display-arrow {
+	width:20px;
+	height:20px;
+	float:left;
+}
+
+.custom-select-display-arrow:before {
+	content:'\25BC';
+}
