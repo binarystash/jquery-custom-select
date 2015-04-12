@@ -10,6 +10,8 @@
 	display:block;
 	filter:alpha(opacity=0);
 	cursor:pointer;
+	color:#89a8a8;
+	line-height:normal;
 }
 
 .custom-select-display {
