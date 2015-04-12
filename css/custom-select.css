@@ -35,6 +35,7 @@
 .custom-select-display-value {
 	width:70%;
 	float:left;
+	text-align:left;
 }
 
 .custom-select-display-arrow {
