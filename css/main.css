@@ -85,7 +85,7 @@ html {
 /* Showcase section */
 
 #showcase-section {
-	background:#323a45;
+	background:#4D8E90;
 	padding:80px 0;
 	color:#fff;
 }
@@ -97,6 +97,37 @@ html {
 
 #showcase-section a:hover {
 	color:#1fbba6;
+}
+
+#showcase-section select {
+	color:#000;
+}
+
+/* Demo form */
+
+.demo-form {
+	width:200px;
+	margin:auto;
+	text-align:center;
+}
+
+.demo-form > fieldset > div {
+	margin-bottom:15px;
+}
+
+.demo-form .custom-select-display {
+	line-height:normal;
+}
+
+.demo-form input[type='submit'],
+.demo-form input[type='reset'] {
+	background:#1fbba6;
+	color:#fff;
+	width:70px;
+	height:30px;
+	border:0;
+	padding:0;
+	margin:0 3px;
 }
 
 /* Showcase buttons */
