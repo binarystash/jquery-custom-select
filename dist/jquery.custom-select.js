@@ -1,44 +1,54 @@
-/*! custom-select - v1.0.0 - 2014-05-11
+/*! custom-select - v1.0.0 - 2015-04-12
 * https://github.com/binarystash/custom-select
-* Copyright (c) 2014 BinaryStash; Licensed MIT */
+* Copyright (c) 2015 BinaryStash; Licensed MIT */
 (function ($) {
 
-  $.fn.customSelect = function() {
+	$.fn.customSelect = function() {
 
-    return this.each( function(i,v) {
+		return this.each( function(i,v) {
 
-      //Ensure that a select element was passed
-      if ( !$(v).is('select') ) {
-        return false;         
-      }
+			//Ensure that a select element was passed
+			if ( !$(v).is('select') ) {
+				return false;         
+			}
 
-      //Add classes
-      $(v).addClass("custom-select");
+			//Add classes
+			$(v).addClass("custom-select");
 
-      //Create a dummy select element
-      $(v).after("<div class='custom-select-display'><div class='custom-select-display-value'></div><div class='custom-select-display-arrow'></div></div>");
-      var dummy = $(v).next('.custom-select-display');
+			//Create a dummy select element
+			$(v).after("<div class='custom-select-display'><div class='custom-select-display-value'></div><div class='custom-select-display-arrow'></div></div>");
+			var dummy = $(v).next('.custom-select-display');
 
-      //Determine default value. Use current value; if none, use the first.
-      var selected = ( $(v).find("option:selected").length > 0 ) ? $(v).find("option:selected").text() : $(v).find("option").eq(0).text();
-      dummy.find(".custom-select-display-value").text(selected);
+			//Determine default value. Use current value; if none, use the first.
+			var selected = ( $(v).find("option:selected").length > 0 ) ? $(v).find("option:selected").text() : $(v).find("option").eq(0).text();
+			dummy.find(".custom-select-display-value").text(selected);
+			dummy.attr("data-default",selected);
 
-      //Add events
-      $(v).bind("change",function (e) {
-        var str = $(e.currentTarget).find("option:selected").text();
-        dummy.find(".custom-select-display-value").text(str);
-      });
+			//Add events
+			$(v).bind("change",function (e) {
+				var str = $(e.currentTarget).find("option:selected").text();
+				dummy.find(".custom-select-display-value").text(str);
+			});
 
-      $(v).bind("blur",function () {
-        dummy.removeClass("focused");
-      });
+			$(v).bind("blur",function () {
+				dummy.removeClass("focused");
+			});
 
-      $(v).bind("focus",function() {
-        dummy.addClass("focused");
-      });
+			$(v).bind("focus",function() {
+				dummy.addClass("focused");
+			});
 
-    });
+			//Make reset button aware of the custom checkboxes
+			var form = $(v).parents("form");
+			var reset = form.find("input[type='reset']");
+			reset.each( function() {
+				form.find(".custom-select-display").each( function(i,v) {
+					$(v).html( $(v).attr("data-default") );
+				});
+			});
 
-  };
+		});
+
+	};
 
 }(jQuery));
