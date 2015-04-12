@@ -41,9 +41,9 @@
 			//Make reset button aware of the custom checkboxes
 			var form = $(v).parents("form");
 			var reset = form.find("input[type='reset']");
-			reset.each( function() {
+			reset.click( function() {
 				form.find(".custom-select-display").each( function(i,v) {
-					$(v).html( $(v).attr("data-default") );
+					$(v).find(".custom-select-display-value").html( $(v).attr("data-default") );
 				});
 			});
 
