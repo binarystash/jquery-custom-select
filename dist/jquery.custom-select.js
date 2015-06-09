@@ -1,5 +1,5 @@
-/*! custom-select - v1.0.0 - 2015-04-12
-* https://github.com/binarystash/custom-select
+/*! custom-select - v1.0.0 - 2015-06-09
+* http://www.binarystash.net/jquery-custom-select/
 * Copyright (c) 2015 BinaryStash; Licensed MIT */
 (function ($) {
 
